@@ -13,7 +13,7 @@ export const Navbar = () => {
       <header className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-4 px-6">
         <div className="flex items-center gap-4">
           <NextLink className="flex items-center gap-1" href="/">
-            <p translate="no" className="font-bold text-inherit">Nós. Sua Dias&#60;3</p>
+            <p translate="no" className="font-bold text-white">Nós. Sua Dias&#60;3</p>
           </NextLink>
         </div>
 
@@ -25,11 +25,11 @@ export const Navbar = () => {
           <button
             aria-expanded={isMenuOpen}
             aria-label="Toggle menu"
-            className="p-2"
+            className="p-2 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
-              className="h-6 w-6"
+              className="h-6 w-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
