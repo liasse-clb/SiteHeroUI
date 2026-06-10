@@ -4,7 +4,6 @@ import NextLink from "next/link";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +13,7 @@ export const Navbar = () => {
       <header className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-4 px-6">
         <div className="flex items-center gap-4">
           <NextLink className="flex items-center gap-1" href="/">
-            <p translate="no" className="font-bold text-inherit">Nós. Sua Dias!</p>
+            <p translate="no" className="font-bold text-inherit">Nós. Sua Dias&#60;3</p>
           </NextLink>
         </div>
 

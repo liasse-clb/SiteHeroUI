@@ -11,13 +11,13 @@ export default function IndexPage() {
 
   return (
     <DefaultLayout>
-      <section className="dark flex flex-col items-center justify-center gap-4">
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-start">
+      <section className=" dark flex flex-col items-center gap-4">
+        <div className="-mt-6 flex flex-col items-center justify-start">
           {/* Fundo */}
           <Particles
             particleColors={["#ffffff"]}
             particleCount={70}
-            particleSpread={5}
+            particleSpread={10}
             speed={0.1}
             particleBaseSize={35}
             moveParticlesOnHover
@@ -27,11 +27,11 @@ export default function IndexPage() {
           />
 
           {/* Conteúdo */}
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
             <div className="max-w-xl text-center">
               <SplitText
                 text="A História Que Mudou Minha Vida"
-                className="font-serif text-2xl font-semibold"
+                className="text-white font-serif text-2xl font-semibold"
                 delay={200}
                 duration={1.25}
                 ease="power3.out"
@@ -43,13 +43,18 @@ export default function IndexPage() {
 
               {showContent && (
                 <div className="mt-2 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                  <p className="text-sm mb-3">
+                  <p className="text-sm mb-3 text-white">
                     Algumas pessoas entram na nossa vida.
                     <br />
                     Outras se tornam parte dela.
                   </p>
 
-                  <Button>
+                  <Button
+                    onPress={() => {
+                      document
+                        .getElementById("historia")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}>
                     Começar
                   </Button>
                 </div>
@@ -57,6 +62,10 @@ export default function IndexPage() {
             </div>
           </div>
         </div>
+
+      </section>
+      <section id="historia" className="w-[100%] mt-28">
+        <h2 className="text-white">Quando Éramos Apenas Crianças</h2>
       </section>
     </DefaultLayout>
   );
