@@ -97,7 +97,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
             scroller,
             start: 'top bottom-=20%',
             end: wordAnimationEnd,
-            scrub: true
+            scrub: 1.5
           }
         }
       );
