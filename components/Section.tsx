@@ -14,7 +14,7 @@ export default function PrimeiroAdeus() {
                     baseOpacity={0.1}
                     enableBlur
                     baseRotation={9}
-                    blurStrength={5}
+                    blurStrength={8}
                 >
                     Existem histórias que começam com um encontro.
                     
@@ -26,7 +26,7 @@ export default function PrimeiroAdeus() {
                     baseOpacity={0.1}
                     enableBlur
                     baseRotation={9}
-                    blurStrength={5}
+                    blurStrength={8}
                 >   
                     A nossa não.
                 </ScrollReveal>
@@ -36,7 +36,7 @@ export default function PrimeiroAdeus() {
                     baseOpacity={0.1}
                     enableBlur
                     baseRotation={9}
-                    blurStrength={5}
+                    blurStrength={8}
                 >   
                     A nossa começou com três.
                 </ScrollReveal>
@@ -46,7 +46,7 @@ export default function PrimeiroAdeus() {
                     baseOpacity={0.1}
                     enableBlur
                     baseRotation={9}
-                    blurStrength={5}
+                    blurStrength={8}
                 >   
                     O primeiro aconteceu quando éramos crianças demais para entender a importância daquilo.
                 </ScrollReveal>
@@ -56,7 +56,7 @@ export default function PrimeiroAdeus() {
                     baseOpacity={0.1}
                     enableBlur
                     baseRotation={9}
-                    blurStrength={5}
+                    blurStrength={8}
                 >   
                     O primeiro aconteceu quando éramos crianças demais para entender a importância daquilo.
                 </ScrollReveal>
