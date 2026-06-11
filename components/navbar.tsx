@@ -20,63 +20,8 @@ export const Navbar = () => {
         <div className="hidden sm:flex items-center gap-2">
           
         </div>
-
-        <div className="flex sm:hidden items-center gap-2">
-          <button
-            aria-expanded={isMenuOpen}
-            aria-label="Toggle menu"
-            className="p-2 text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              className="h-6 w-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {isMenuOpen ? (
-                <path
-                  d="M6 18L18 6M6 6l12 12"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                />
-              ) : (
-                <path
-                  d="M4 6h16M4 12h16M4 18h16"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                />
-              )}
-            </svg>
-          </button>
-        </div>
       </header>
 
-      {isMenuOpen && (
-        <div className="border-t border-separator sm:hidden">
-          <ul className="flex flex-col gap-2 px-4 pb-4">
-            {siteConfig.navMenuItems.map((item, index) => (
-              <li key={`${item.label}-${index}`}>
-                <Link
-                  className={clsx(
-                    "block py-2 text-lg no-underline",
-                    index === 2
-                      ? "text-accent"
-                      : index === siteConfig.navMenuItems.length - 1
-                        ? "text-danger"
-                        : "text-foreground",
-                  )}
-                  href="#"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </nav>
   );
 };

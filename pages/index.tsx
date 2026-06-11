@@ -5,7 +5,8 @@ import { useState } from "react";
 import { Button } from "@heroui/react";
 import DefaultLayout from "@/layouts/default";
 import SplitText from "../components/SplitText";
-import AnimatedContent from "@/components/animate";
+import Stars from "@/components/stars";
+import Section from "@/components/Section";
 
 export default function IndexPage() {
   const [showContent, setShowContent] = useState(false);
@@ -13,13 +14,13 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className=" dark flex flex-col items-center gap-4">
-        <div className="mt-6 z-20 flex flex-col items-center justify-start">
+        <div className="mt-2 z-20 flex flex-col items-center justify-start">
           {/* Fundo */}
           <div className="z-0 absolute">
             <Particles
 
               particleColors={["#ffffff"]}
-              particleCount={150}
+              particleCount={90}
               particleSpread={18}
               speed={0.1}
               particleBaseSize={45}
@@ -30,8 +31,8 @@ export default function IndexPage() {
             />
           </div>
           {/* Conteúdo */}
-          <div className="flex flex-col items-center justify-center">
-            <div className="max-w-xl text-center">
+          <div className="flex flex-col items-center justify-center h-[100vh]">
+            <div className="max-w-xl text-center h-full">
               <SplitText
                 text="A História Que Mudou Minha Vida"
                 className="text-white font-serif text-2xl font-semibold"
@@ -67,7 +68,7 @@ export default function IndexPage() {
         </div>
 
       </section>
-      <section id="historia" className="w-[100%] mt-64 text-center flex flex-col items-center gap-4">
+      <section id="historia" className="w-[100%] mt-20 text-center flex flex-col items-center gap-4">
 
         <SplitText
           text="Quando éramos crianças."
@@ -80,7 +81,7 @@ export default function IndexPage() {
           to={{ opacity: 1, y: 0 }}
           onLetterAnimationComplete={() => setShowContent(true)}
         />
-          <img className="rounded-3xl" src="/img3.png" alt="image" />
+        <img className="rounded-3xl" src="/img3.png" alt="image" />
 
         <SplitText
           text="Toque no aqui ↓ para melhor experiência :)"
@@ -97,6 +98,11 @@ export default function IndexPage() {
           <source src="/audio/musga.mp3" type="audio/mpeg" />
         </audio>
         <p className="text-white font-serif text-sm">Nenhuma delas fazia ideia.</p>
+        <Stars />
+      </section>
+
+      <section className="mb-56">
+        <Section />
       </section>
     </DefaultLayout>
   );
