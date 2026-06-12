@@ -19,17 +19,18 @@ import Cap9 from "@/components/Cap9";
 import Cap10 from "@/components/Cap10";
 import Cap11 from "@/components/Cap11";
 import Stack from "@/components/Pilha";
+import Link from "next/link";
 
 export default function IndexPage() {
   const [showContent, setShowContent] = useState(false);
   const images = [
-  "/img1.png",
-  "/img2.png",
-  "/img3.png",
-  "/img4.png",
-  "/img5.png",
-  "/img6.png"
-];
+    "/img1.png",
+    "/img2.png",
+    "/img3.png",
+    "/img4.png",
+    "/img5.png",
+    "/img6.png"
+  ];
 
 
   return (
@@ -105,7 +106,7 @@ export default function IndexPage() {
         <img className="rounded-3xl" src="/img3.png" alt="image" />
 
         <SplitText
-          text="Toque no aqui ↓ para melhor experiência :)"
+          text="Toque aqui ↓ para melhor experiência :)"
           className="text-white font-serif text-sm"
           delay={120}
           duration={1.25}
@@ -162,7 +163,7 @@ export default function IndexPage() {
         <Cap11 />
       </section>
 
-      <div style={{ width: 208, height: 208 }}>
+      <div style={{ width: 208, height: 208 }} className="flex items-center justify-center m-auto">
         <Stack
           randomRotation={false}
           sensitivity={200}
@@ -180,6 +181,27 @@ export default function IndexPage() {
           pauseOnHover={false}
         />
       </div>
+      <section className=" dark mt-32 flex flex-col items-center gap-4">
+        <p className="text-white font-serif text-sm">Toque aqui ↓</p>
+        <Link href="/carta">
+          <button
+            className="
+            px-8 py-4
+            rounded-lg
+            bg-purple-700
+            hover:bg-purple-600
+            text-white
+            font-semibold
+            transition-all
+            duration-300
+            hover:scale-105
+            shadow-lg
+          "
+          >
+            Abrir Carta 💜
+          </button>
+        </Link>
+      </section>
     </DefaultLayout>
   );
 }
