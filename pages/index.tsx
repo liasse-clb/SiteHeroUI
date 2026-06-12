@@ -7,9 +7,30 @@ import DefaultLayout from "@/layouts/default";
 import SplitText from "../components/SplitText";
 import Stars from "@/components/stars";
 import Section from "@/components/Section";
+import Cap1 from "@/components/Cap1";
+import Cap2 from "@/components/Cap2";
+import Cap3 from "@/components/Cap3";
+import Cap4 from "@/components/Cap4";
+import Cap5 from "@/components/Cap5";
+import Cap6 from "@/components/Cap6";
+import Cap7 from "@/components/Cap7";
+import Cap8 from "@/components/Cap8";
+import Cap9 from "@/components/Cap9";
+import Cap10 from "@/components/Cap10";
+import Cap11 from "@/components/Cap11";
+import Stack from "@/components/Pilha";
 
 export default function IndexPage() {
   const [showContent, setShowContent] = useState(false);
+  const images = [
+  "/img1.png",
+  "/img2.png",
+  "/img3.png",
+  "/img4.png",
+  "/img5.png",
+  "/img6.png"
+];
+
 
   return (
     <DefaultLayout>
@@ -95,7 +116,7 @@ export default function IndexPage() {
           onLetterAnimationComplete={() => setShowContent(true)}
         />
         <audio controls>
-          <source src="/audio/musga.mp3" type="audio/mpeg" />
+          <source src="/audio/easy.mp3" type="audio/mpeg" />
         </audio>
         <p className="text-white font-serif text-sm">Nenhuma delas fazia ideia.</p>
         <Stars />
@@ -104,6 +125,61 @@ export default function IndexPage() {
       <section className="mb-56">
         <Section />
       </section>
+      <section className="mb-56">
+        <Cap1 />
+      </section>
+      <section className="mb-56">
+        <Cap2 />
+      </section>
+      <section className="mb-56">
+        <Cap3 />
+      </section>
+      <section className="mb-56">
+        <Cap4 />
+      </section>
+      <section className="mb-56">
+        <Cap5 />
+      </section>
+      <section className="mb-56">
+        <Cap6 />
+      </section>
+      <section className="mb-56">
+        <Cap7 />
+      </section>
+      <section className="mb-56">
+        <Cap8 />
+      </section>
+      <section className="mb-56">
+        <Cap9 />
+      </section>
+      <section className="mb-56">
+        <audio controls >
+          <source src="/audio/musga.mp3" type="audio/mpeg" />
+        </audio>
+        <Cap10 />
+      </section>
+      <section className="mb-56">
+        <Cap11 />
+      </section>
+
+      <div style={{ width: 208, height: 208 }}>
+        <Stack
+          randomRotation={false}
+          sensitivity={200}
+          sendToBackOnClick={true}
+          cards={images.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`card-${i + 1}`}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          ))}
+          autoplay={false}
+          autoplayDelay={3000}
+          pauseOnHover={false}
+        />
+      </div>
     </DefaultLayout>
   );
 }
